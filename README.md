@@ -9,3 +9,4 @@ a few build templates
 - webpack with es6 and server side seup
   - https://github.com/intheon/seed-templates/tree/master/3-webpack-server
 - webpack with react + es6 on the client, with separate node server setup
+  - https://github.com/intheon/seed-templates/tree/master/4-webpack-react-server
