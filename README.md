@@ -13,4 +13,4 @@ a few build templates
 - plain vue with a connection to a database which reactively updates the view
   - https://github.com/intheon/seed-templates/tree/master/5-vue-firebase-database
 - webpack2 setup with hot reloading, es6, vue-loader, and connection to signInWithGoogle on Firebase
-  - https://github.com/intheon/seed-templates/tree/master/5-vue-firebase-database
+  - https://github.com/intheon/seed-templates/tree/master/6-vue-webpack2-firebase-auth 
