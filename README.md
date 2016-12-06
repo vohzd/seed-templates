@@ -10,3 +10,7 @@ a few build templates
   - https://github.com/intheon/seed-templates/tree/master/3-webpack-server
 - webpack with react + es6 on the client, with separate node server setup
   - https://github.com/intheon/seed-templates/tree/master/4-webpack-react-server
+- plain vue with a connection to a database which reactively updates the view
+  - https://github.com/intheon/seed-templates/tree/master/5-vue-firebase-database
+- webpack2 setup with hot reloading, es6, vue-loader, and connection to signInWithGoogle on Firebase
+  - https://github.com/intheon/seed-templates/tree/master/5-vue-firebase-database
