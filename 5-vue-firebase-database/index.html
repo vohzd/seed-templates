@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		firebase app
+	</title>
+
+	<!-- Vue -->
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<!-- Firebase -->
+	<script src="https://gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+	<!-- VueFire -->
+	<script src="https://unpkg.com/vuefire/dist/vuefire.js"></script>
+
+</head>
+<body>
+
+
+
+<main id="app">
+
+	<h4>firebase app</h4>
+
+	<input type="text" placeholder="enter something" v-model="newTodoText" />
+	<button v-on:click="submitTodo">Add something</button>
+
+	<ul>
+		<li v-for="todo in todos">{{ todo.text }}</li>
+	</ul>
+
+</main>
+
+
+
+
+<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
