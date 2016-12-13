@@ -1,3 +1,13 @@
+<template lang="html">
+  <div class="">
+  	Contacts List
+  </div>
+</template>
+
+<script>
 export default {
-	template: "<div>Contacts Editor</div>"
 }
+</script>
+
+<style lang="css">
+</style>

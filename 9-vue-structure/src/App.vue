@@ -1,16 +1,12 @@
 <template>
-
 	<main>
-
 		<header-bar></header-bar>
 		<main-view>
 			<contacts-editor />
 			<contacts-list />
 		</main-view>
 		<footer-bar></footer-bar>
-
 	</main>
-
 </template>
 
 <script>
@@ -31,34 +27,30 @@
 			"footer-bar": Footer
 		}
 	}
-
 </script>
 
 <style>
+	html {
+		margin: 0;
+		padding: 0;
+	}
 
-body
-{
-	font-family: 'Avenir', Helvetica, Arial, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	color: #2c3e50;
-}
+	body {
+		font-family: 'Avenir', Helvetica, Arial, sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		color: #2c3e50;
+		margin: 0;
+		padding: 0;
+	}
 
-ul
-{
-	list-style-type: none;
-	padding: 0;
-}
+	h1, h2, h3, h4, h5, h6, p, ul, li {
+		margin: 0;
+		padding: 0;
+	}
 
-li
-{
-	display: inline-block;
-	margin: 0 10px;
-}
-
-a
-{
-	color: #42b983;
-}
+	a {
+		color: #42b983;
+	}
 
 </style>
