@@ -8,6 +8,6 @@ a few build templates to get started with
 5. [Vue.js build with Firebase Database sync](https://github.com/intheon/seed-templates/tree/master/5-vue-firebase-database)
 6. [Vue.js build with Firebase Auth sync (signInWithGoogle)](https://github.com/intheon/seed-templates/tree/master/6-vue-webpack2-firebase-auth)
 7. [Vue with Vuex](https://github.com/intheon/seed-templates/tree/master/7-vue-vuex)
-8. [Vue with VouRouter](https://github.com/intheon/seed-templates/tree/master/8-vue-router)
+8. [Vue with VueRouter](https://github.com/intheon/seed-templates/tree/master/8-vue-router)
 9. [Vue with Vuex & Composed Components](https://github.com/intheon/seed-templates/tree/master/9-vue-structure)
 
