@@ -1,9 +1,9 @@
 <template>
 	<main>
 		<header-bar></header-bar>
-		<main-view>
-			<contacts-editor />
-			<contacts-list />
+		<main-view class="frame">
+			<contacts-detail class="col-3"/>
+			<contacts-list class="col-1"/>
 		</main-view>
 		<footer-bar></footer-bar>
 	</main>
@@ -13,7 +13,7 @@
 
 	import Header from "./components/Header.vue";
 	import Main from "./components/Main.vue";
-	import ContactsEditor from "./components/ContactsEditor.vue";
+	import ContactsDetail from "./components/ContactsDetail.vue";
 	import ContactsList from "./components/ContactsList.vue";
 	import Footer from "./components/Footer.vue";
 
@@ -22,11 +22,12 @@
 		components: {
 			"header-bar": Header,
 			"main-view": Main,
-			"contacts-editor": ContactsEditor,
+			"contacts-detail": ContactsDetail,
 			"contacts-list": ContactsList,
 			"footer-bar": Footer
 		}
 	}
+
 </script>
 
 <style>
@@ -52,5 +53,27 @@
 	a {
 		color: #42b983;
 	}
+
+	.frame {
+		float: left;
+		width: 100%;
+	}
+	.col-4 {
+		float: left;
+		width: 100%;
+	}
+	.col-3 {
+		float: left;
+		width: 75%;
+	}
+	.col-2 {
+		float: left;
+		width: 50%;
+	}
+	.col-1 {
+		float: left;
+		width: 25%;
+	}
+
 
 </style>

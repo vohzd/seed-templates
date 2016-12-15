@@ -1,10 +1,10 @@
-// LIBS
 import Vue from "vue";
-
-// MAIN MODULE
-import router from "./App.vue";
+import router from "./router/router.js";
+import App from "./components/App.vue";
 
 // CORE INSTANCE
 new Vue({
-	router,
-}).$mount("#app")
+	el: "#app",
+	render: h => h(App),
+	router
+})

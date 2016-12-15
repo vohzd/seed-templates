@@ -1,14 +1,13 @@
 // LIBS
 import Vue from "vue";
-
+// STORE
+import store from "./store/store.js";
 // CUSTOM MODULES
 import App from "./App.vue";
 
 // INSTANCE
 new Vue({
 	el: "#app",
-	component: {
-		app: App
-	},
+	store,
 	render: h => h(App)
 });

@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="">
-  	Contact Editor
+  	Contact Detail
   </div>
 </template>
 
