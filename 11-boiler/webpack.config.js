@@ -1,5 +1,5 @@
-var path = require('path')
-var webpack = require('webpack')
+var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
   entry: './src/main.js',
@@ -14,7 +14,10 @@ module.exports = {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
-          // vue-loader options go here
+          loaders: {
+            scss: 'vue-style-loader!css-loader!sass-loader', // <style lang="scss">
+            sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax' // <style lang="sass">
+          }
         }
       },
       {
@@ -22,11 +25,11 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/
       },
-	  {
-		test: /\.css$/,
-		loader: "css-loader",
-		exclude: /node_modules/
-	  },
+  	  {
+    		test: /\.css$/,
+    		loader: "css-loader",
+    		exclude: /node_modules/
+  	  },
       {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
@@ -45,7 +48,7 @@ module.exports = {
     historyApiFallback: true,
     noInfo: true
   },
-  devtool: '#eval-source-map'
+  devtool: '#eval-source-map',
 }
 
 if (process.env.NODE_ENV === 'production') {
