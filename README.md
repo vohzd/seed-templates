@@ -10,4 +10,5 @@ a few build templates to get started with
 7. [Vue with Vuex](https://github.com/intheon/seed-templates/tree/master/7-vue-vuex)
 8. [Vue with VueRouter](https://github.com/intheon/seed-templates/tree/master/8-vue-router)
 9. [Vue with Vuex & Composed Components](https://github.com/intheon/seed-templates/tree/master/9-vue-structure)
-
+10. [Vuex sync'd with Firebase using VuexFire](https://github.com/synthy2/seed-templates/tree/master/10-vuexfire)
+11. [Boilerplate build using all of the below, plus SCSS support](https://github.com/synthy2/seed-templates/tree/master/11-boiler)
