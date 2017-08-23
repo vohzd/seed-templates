@@ -13,3 +13,4 @@ a few build templates to get started with
 10. [Vuex sync'd with Firebase using VuexFire](https://github.com/vohzd/seed-templates/tree/master/10-vuexfire)
 11. [Boilerplate build using the above (with Vue instead of React), plus SCSS support](https://github.com/vohzd/seed-templates/tree/master/11-boiler)
 12. [Vue-Router Navigation guards for redirect when unauthenticated](https://github.com/vohzd/seed-templates/tree/master/12-navigation-guards)
+13. [Blank LeafletJS setup with latest versions of Webpack, Leaflet, and Vue used as of Aug 2017](https://github.com/vohzd/seed-templates/tree/master/13-blank-leaflet-vue)
