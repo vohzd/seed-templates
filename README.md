@@ -14,3 +14,9 @@ a few build templates to get started with
 11. [Boilerplate build using the above (with Vue instead of React), plus SCSS support](https://github.com/vohzd/seed-templates/tree/master/11-boiler)
 12. [Vue-Router Navigation guards for redirect when unauthenticated](https://github.com/vohzd/seed-templates/tree/master/12-navigation-guards)
 13. [Blank LeafletJS setup with latest versions of Webpack, Leaflet, and Vue used as of Aug 2017](https://github.com/vohzd/seed-templates/tree/master/13-blank-leaflet-vue)
+14. [Latest versions available for a basic vue app with Webpack 3 (Hot Reloading)](https://github.com/vohzd/seed-templates/tree/master/14-oct-2017-babel-updates)
+15. [Localisable strings support](https://github.com/vohzd/seed-templates/tree/master/15-localisable-strings)
+16. [Non-vue basic Progressive Web App (supports installation and offline)](https://github.com/vohzd/seed-templates/tree/master/15-localisable-strings/16-basic-pwa)
+17. [Vue basic Progressive Web App (supports installation, offline and HMR)](https://github.com/vohzd/seed-templates/tree/master/17-localisable-strings/16-vue-basic-pwa)
+18. [Firebase & Vue/Vuex PWA (Uses Firebase offline for persistant data)](https://github.com/vohzd/seed-templates/tree/master/18-localisable-strings/16-firebase-vuex-pwa)
+
