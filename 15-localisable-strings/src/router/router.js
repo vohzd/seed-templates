@@ -6,7 +6,7 @@ Vue.use(VueRouter);
 import state 											from "../vuex/state.js";
 
 import Home 				        			from "../components/Home/Home.vue";
-import Settings 				          	from "../components/Settings/Settings.vue";
+import Settings 				          from "../components/Settings/Settings.vue";
 
 // define routes
 const routes = [

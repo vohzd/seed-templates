@@ -1,6 +1,10 @@
 <template lang="html">
-  <section>
-    <h4>Home</h4>
+  <section class="main-body">
+    <h2>{{ languages[sl].s.home }}</h2>
+    <article class="description">
+      {{ languages[sl].s.appDesc }}
+    </article>
+    <router-link to="/settings">{{ languages[sl].s.settings }}</router-link>
   </section>
 </template>
 
@@ -9,6 +13,12 @@ import { mapGetters }               from "vuex";
 import moment                       from "moment";
 
 export default {
+  computed: {
+    ...mapGetters([
+      "languages",
+      "sl"
+    ])
+  },
   data(){
     return {
     }

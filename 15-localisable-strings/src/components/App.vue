@@ -30,6 +30,13 @@
 		margin-bottom: 16px;
 	}
 
+	h2 {
+		width: 100%;
+		padding-bottom: 4px;
+		margin-bottom: 8px;
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+	}
+
 	a {
 		color: #9d7660;
 		text-decoration: none;
@@ -38,5 +45,15 @@
 	a:hover{
 		color: #82718e;
 	}
+
+	.main-body {
+		padding: 32px;
+	}
+
+	.margin-top {
+		margin-top: 16px;
+	}
+
+
 
 </style>
