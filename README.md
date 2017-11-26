@@ -18,5 +18,5 @@ a few build templates to get started with
 15. [Localisable strings support](https://github.com/vohzd/seed-templates/tree/master/15-localisable-strings)
 16. [Non-vue basic Progressive Web App (supports installation and offline)](https://github.com/vohzd/seed-templates/tree/master/15-localisable-strings/16-basic-pwa)
 17. [Vue basic Progressive Web App (supports installation, offline and HMR)](https://github.com/vohzd/seed-templates/tree/master/17-localisable-strings/16-vue-basic-pwa)
-18. [Firebase & Vue/Vuex PWA (Uses Firebase offline for persistant data)](https://github.com/vohzd/seed-templates/tree/master/18-localisable-strings/16-firebase-vuex-pwa)
+18. [Firebase & Vue/Vuex PWA (Uses Firebase offline for persistant data)](https://github.com/vohzd/seed-templates/tree/master/18-firebase-vuex-pwa)
 
