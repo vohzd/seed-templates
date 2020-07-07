@@ -1,0 +1,17 @@
+{
+  "name": "archon",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "nuxt",
+    "generate": "nuxt generate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vohzd/archon.git"
+  },
+  "homepage": "https://github.com/vohzd/archon#readme",
+  "dependencies": {
+    "@nuxtjs/axios": "^5.11.0",
+    "nuxt": "^2.13.3"
+  }
+}
