@@ -1,0 +1,21 @@
+{
+  "name": "google-calendar-integration",
+  "version": "0.1.7",
+  "description": "google calendar integration",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon ./index.js",
+    "prod": "cross-env NODE_ENV=production node ./index.js",
+    "start": "node ./index.js"
+  },
+  "author": "vohzd",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.1",
+    "googleapis": "^49.0.0",
+    "mongoose": "^5.9.11",
+    "multer": "^1.4.2",
+    "cross-env": "^7.0.2"
+  }
+}
