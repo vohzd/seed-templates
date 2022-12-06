@@ -12,7 +12,7 @@
   "repository": "https://github.com/vohzd/vend.git",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "express": "^4.16.2",
+    "express": "^4.18.2",
     "gun": "^0.9.94",
     "localforage": "^1.5.6",
     "moment": "^2.20.1",
