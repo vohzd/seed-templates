@@ -1,0 +1,4 @@
+- Vite as the Bundler
+- React as the UI lib.
+- With Storybook 7
+- With Less
