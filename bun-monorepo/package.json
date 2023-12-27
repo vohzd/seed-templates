@@ -1,0 +1,24 @@
+{
+  "name": "epitrade",
+  "private": "true",
+  "module": "index.ts",
+  "type": "module",
+  "workspaces": [
+    "packages/api",
+    "packages/nuxt",
+    "packages/ui"
+  ],
+  "scripts": {
+    "api": "cd packages/api && bun  --watch run index.ts",
+    "api:migrate-db": "cd packages/api && bun drizzle-kit generate:sqlite",
+    "nuxt": "cd packages/nuxt && bun  --hot run dev",
+    "remix": "cd packages/remix && bun  --hot run dev",
+    "dev-all": "concurrently 'npm:api' 'npm:remix' 'npm:nuxt'",
+    "dev-nuxt": "concurrently 'npm:api' 'npm:nuxt'",
+    "dev-remix": "NODE_TLS_REJECT_UNAUTHORIZED=0 concurrently 'npm:api' 'npm:remix'"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "express-validator": "^7.0.1"
+  }
+}
