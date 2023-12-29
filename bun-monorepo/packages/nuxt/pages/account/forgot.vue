@@ -1,5 +1,5 @@
 <template>
-  <form class="center mtx">
+  <form class="center">
     <h1>Account Check</h1>
     <p>Welcome! Let's check if you already have an account.</p>
     <p>Enter your Email.</p>

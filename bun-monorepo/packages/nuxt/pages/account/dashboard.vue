@@ -1,5 +1,5 @@
 <template>
-  <main class="center mtx">
+  <main class="center">
     <h1>dashboard</h1>
 
     <p>

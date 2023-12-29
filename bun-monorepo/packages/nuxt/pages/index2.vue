@@ -1,5 +1,5 @@
 <template>
-  <main class="center mt">
+  <main class="center">
     <div class="two-grid relative">
       <div class="main-image">
         <NuxtImg src="/hourglass.jpg" />
@@ -140,7 +140,7 @@ ul li {
     grid-template-columns: 1fr;
   }
 
-  .two-grid > div {
+  .two-grid>div {
     margin-bottom: 32px;
   }
 

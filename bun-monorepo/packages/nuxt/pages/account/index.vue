@@ -1,13 +1,13 @@
 <template>
-  <main class="center mtx">
+  <main class="center">
     <h1>Account Check</h1>
     <p>Welcome! Let's check if you already have an account.</p>
     <p>Enter your Email.</p>
     <k-form @submit="checkEmail">
-      <k-input v-model="email" type="text" placeholder="Email Address" />
+      <k-input v-model="email" placeholder="Email Address" />
       <k-button class="mt" :disabled="!isEmailValid(email)" type="submit">Check Email</k-button>
     </k-form>
-    <nuxt-link to="/account/forgot" class="medium row mt">Forgot?</nuxt-link>
+    <nuxt-link to="/account/forgot" class="mtx">Forgot?</nuxt-link>
   </main>
 </template>
 
@@ -24,6 +24,6 @@ const email = ref("test@example4.com");
 async function checkEmail(e: SubmitEvent) {
   e.preventDefault();
   const { value: exists } = await api.get({ email });
-  exists ? await navigateTo("/account/login") : await navigateTo("/account/register");
+  exists ? await navigateTo(`/account/login?email=${String(email.value)}`) : await navigateTo(`/account/register?email=${String(email.value)}`);
 }
 </script>

@@ -1,3 +1,4 @@
+// import { FetchError } from "ofetch";
 import { useHandleError } from "./useHandleError";
 
 export async function useApi(endpoint: string) {
@@ -7,8 +8,8 @@ export async function useApi(endpoint: string) {
   return {
     async get(query: object) {
       try {
-        console.log("fetching....");
-        console.log(query);
+        // console.log("fetching....");
+        // console.log(query);
         const { data, error } = await useFetch(url, {
           method: "GET",
           credentials: "include",
@@ -40,7 +41,11 @@ export async function useApi(endpoint: string) {
 
         if (error.value) {
           useHandleError(error.value);
-          return error;
+          console.log(error.value.statusMessage);
+          return {
+            code: error.value.statusCode,
+            message: error.value.statusMessage,
+          };
         }
 
         return data;

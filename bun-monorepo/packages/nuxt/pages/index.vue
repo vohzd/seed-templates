@@ -1,5 +1,5 @@
 <template>
-  <main class="center mtx">
+  <main class="center">
     <h1>Cool Website</h1>
     <p>Reactive text: {{ test }}</p>
     <p>

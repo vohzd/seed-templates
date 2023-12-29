@@ -1,34 +1,47 @@
 <template>
-  <form class="center mtx">
-    <h2>You have an account</h2>
+  <main class="center">
+    <h1>You have an account</h1>
     <p>Welcome back, commander!</p>
-    <p>Enter your Password.</p>
-    <form onsubmit="handleLogin" class="row">
-      <input v-model="password" type="password" placeholder="Password" />
-      <k-button :disabled="isButtonDisabled" @click.native.prevent="handleLogin">Login</k-button>
-    </form>
 
-  </form>
+    <k-form @submit="handleLogin">
+      <k-input v-model="email" placeholder="Email" />
+      <k-input v-model="password" placeholder="Password" />
+      <k-button :disabled="password.length === 0" type="submit">Login</k-button>
+    </k-form>
+
+  </main>
 </template>
 
 <script setup lang="ts">
 import KButton from "@epitrade/ui/Button.vue";
+import KForm from "@epitrade/ui/Form.vue";
+import KInput from "@epitrade/ui/Input.vue";
+
 import { useApi } from "~/composables/useApi";
 
-const api = await useApi("/account/login");
-const isButtonDisabled = false;
-const email = ref("test@example4.com");
-const password = ref("");
+type LoginResponse = {
+  code?: number
+  message?: string
+}
 
-async function handleLogin() {
-  const { value } = await api.post({ email, password });
+const api = await useApi("/account/login");
+
+const { query } = useRoute();
+const email = ref(query.email);
+const password = ref("213123");
+
+async function handleLogin(e: SubmitEvent) {
+  e.preventDefault();
+
+  const response = await api.post({ email, password });
 
   console.log("logging in...");
-  console.log(value);
+  console.log(response.code);
+
   console.log("finished logg");
 
-  if (value) {
-    await navigateTo("/account/dashboard");
-  }
+  // if (value) {
+  //   await navigateTo("/account/dashboard");
+  // }
 }
 </script>

@@ -31,6 +31,9 @@ router.post("/login", validate(accountBody), async (req, res) => {
   try {
     const hash = await login(email, password);
 
+    console.log("hash");
+    console.log(hash);
+
     if (hash) {
       console.log("Login successful for:", email);
 
