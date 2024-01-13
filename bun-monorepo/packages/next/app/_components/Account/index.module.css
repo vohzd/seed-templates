@@ -1,0 +1,33 @@
+.form input {
+  padding: 16px;
+  width: 100%;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  background: antiquewhite;
+}
+
+.form button {
+  background: antiquewhite;
+  outline: none;
+  border: none;
+  padding: 16px;
+  margin-right: 16px;
+  border-radius: 4px;
+  transition: 1s background;
+}
+
+.form button:hover {
+  cursor: pointer;
+  background: rgb(214, 191, 149);
+}
+
+.status {
+  text-align: right;
+  top: 0;
+  right: 16px;
+  display: flex;
+  position: absolute;
+  gap: 8px;
+}

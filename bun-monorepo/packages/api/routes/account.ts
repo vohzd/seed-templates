@@ -1,14 +1,28 @@
 import express from "express";
 
 import { create, get, login } from "../services/account.js";
-import { accountBody, accountGet, validate } from "../utils/validators/zod.js";
+import { accountBody, isEmailAddress, validate } from "../utils/validators/zod.js";
 
 const router = express.Router();
 
-router.get("/", validate(accountGet), async (req, res) => {
+// router.get("/", validate(isEmailAddress), async (req, res) => {
+//   const { email } = req.query;
+//   const result = await get(email as string);
+//   res.send(!!result.length);
+// });
+
+router.get("/check", validate(isEmailAddress), async (req, res) => {
+  console.log("CHECKING COOKIES");
+  console.log(req.cookies);
   const { email } = req.query;
   const result = await get(email as string);
-  res.send(!!result.length);
+  res.send({ exists: !!result.length });
+
+  // if (req.cookies) {
+  //   res.send({ exists: true });
+  // } else {
+  //   res.send({ exists: false });
+  // }
 });
 
 router.post("/", validate(accountBody), async (req, res) => {

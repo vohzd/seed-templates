@@ -4,12 +4,18 @@ import { ZodError, ZodTypeAny, z } from "zod";
 export const validate = (schema: ZodTypeAny) => (req: Request, res: Response, next: NextFunction) => {
   try {
     // this can take GET or POST requests (for now, likely to be extended in the future to DELETE and PUT)
+
+    console.log(req.body);
     const contents = req.method === "GET" ? req.query : req.body;
 
     console.log("VALIDATING!!!");
     console.log(contents);
+
+    schema.parse(contents);
+
     next();
   } catch (error) {
+    console.log("catching.....");
     if (error instanceof ZodError) {
       res.status(400).send(error.errors);
     } else {
@@ -18,8 +24,7 @@ export const validate = (schema: ZodTypeAny) => (req: Request, res: Response, ne
   }
 };
 
-// todo, maybe put these in different files?
-export const accountGet = z.object({
+export const isEmailAddress = z.object({
   email: z.string().email(),
 });
 

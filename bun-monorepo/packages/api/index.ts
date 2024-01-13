@@ -15,8 +15,11 @@ const port = 8080;
 // TODO, discard this for production, as we'll use a reverse proxy (nginx) to handle https
 const options = {
   key: fs.readFileSync("config/dev-certificates/server.key"), // Replace with path to your key
-  cert: fs.readFileSync("config/dev-certificates/server.cert"), // Replace with path to your cert
+  cert: fs.readFileSync("config/dev-certificates/server.crt"), // Replace with path to your cert
+  rejectUnauthorized: false,
 };
+
+// const options = {};
 
 // server setup
 app.use(helmet());

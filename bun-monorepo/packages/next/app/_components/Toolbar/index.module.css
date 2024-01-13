@@ -1,0 +1,14 @@
+.toolbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: aliceblue;
+  height: 64px;
+  line-height: 64px;
+}
+
+.logo {
+  text-align: left;
+  padding-left: 16px;
+}
