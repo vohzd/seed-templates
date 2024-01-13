@@ -19,7 +19,7 @@ import KInput from "@epitrade/ui/Input.vue";
 import { useApi } from "~/composables/useApi";
 
 const api = await useApi("/account");
-const email = ref("test@example4.com");
+const email = ref("test@example7.com");
 
 async function checkEmail(e: SubmitEvent) {
   e.preventDefault();

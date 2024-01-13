@@ -26,4 +26,11 @@ export function useHandleError(error: FetchError) {
     data,
     statusCode,
   };
+
+  setTimeout(() => {
+    errorState.value = {
+      data: null,
+      statusCode: null,
+    };
+  }, 3000);
 }

@@ -6,7 +6,7 @@ export async function useApi(endpoint: string) {
   const url = `${apiUrl}${endpoint}`;
 
   return {
-    async get(query: object) {
+    async get(query?: object) {
       try {
         // console.log("fetching....");
         // console.log(query);

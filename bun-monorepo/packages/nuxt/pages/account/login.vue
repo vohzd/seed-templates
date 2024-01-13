@@ -28,7 +28,7 @@ const api = await useApi("/account/login");
 
 const { query } = useRoute();
 const email = ref(query.email);
-const password = ref("213123");
+const password = ref("1234567");
 
 async function handleLogin(e: SubmitEvent) {
   e.preventDefault();
@@ -36,12 +36,11 @@ async function handleLogin(e: SubmitEvent) {
   const response = await api.post({ email, password });
 
   console.log("logging in...");
-  console.log(response.code);
+  console.log(response);
 
-  console.log("finished logg");
 
-  // if (value) {
-  //   await navigateTo("/account/dashboard");
-  // }
+  if (response) {
+    await navigateTo("/account/dashboard");
+  }
 }
 </script>
