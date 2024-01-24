@@ -32,10 +32,9 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 export default function Account() {
   return (
     <main>
-      <h1>Welcome to the account page2</h1>
+      <h1>Account Check</h1>
       <Form method="post">
-        <h1>I am a form!</h1>
-        <input type="text" name="email" />
+        <input type="email" name="email" placeholder="Your Email" />
         <button>Submit</button>
       </Form>
     </main>

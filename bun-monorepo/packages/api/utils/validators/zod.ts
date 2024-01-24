@@ -16,6 +16,8 @@ export const validate = (schema: ZodTypeAny) => (req: Request, res: Response, ne
     next();
   } catch (error) {
     console.log("catching.....");
+    console.log("zod error is,,,,");
+    console.log(error);
     if (error instanceof ZodError) {
       res.status(400).send(error.errors);
     } else {

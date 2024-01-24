@@ -23,7 +23,7 @@ const email = ref("test@example7.com");
 
 async function checkEmail(e: SubmitEvent) {
   e.preventDefault();
-  const { value: exists } = await api.get({ email });
+  const { value: exists } = await api.get({ email: toRaw(email) });
   exists ? await navigateTo(`/account/login?email=${String(email.value)}`) : await navigateTo(`/account/register?email=${String(email.value)}`);
 }
 </script>

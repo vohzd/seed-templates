@@ -27,6 +27,8 @@ router.get("/check", validate(isEmailAddress), async (req, res) => {
 
 router.post("/", validate(accountBody), async (req, res) => {
   console.log("serverside validation passed...");
+
+  console.log(req.body);
   const { email, password } = req.body;
 
   const result = await create(email, password);
@@ -40,6 +42,9 @@ router.post("/", validate(accountBody), async (req, res) => {
 router.post("/login", validate(accountBody), async (req, res) => {
   const { email, password } = req.body;
   console.log("CHECKING ACCOUNT");
+
+  console.log(email);
+  console.log(password);
 
   // TODO, see if you can set up a global try/catch handling system, rather than having it per route
   try {

@@ -19,10 +19,12 @@
     "dev-all": "concurrently 'npm:api' 'npm:remix' 'npm:nuxt'",
     "dev-remix": "NODE_TLS_REJECT_UNAUTHORIZED=0 concurrently 'npm:api' 'npm:remix'",
     "dev-next": "NODE_TLS_REJECT_UNAUTHORIZED=0 concurrently 'npm:api' 'npm:next'",
-    "dev-nuxt": "concurrently 'npm:api' 'npm:nuxt'"
+    "dev-nuxt": "NODE_TLS_REJECT_UNAUTHORIZED=0  concurrently 'npm:api' 'npm:nuxt'"
   },
   "dependencies": {
+    "axios": "^1.6.5",
     "concurrently": "^8.2.2",
-    "express-validator": "^7.0.1"
+    "express-validator": "^7.0.1",
+    "ky": "^1.2.0"
   }
 }
