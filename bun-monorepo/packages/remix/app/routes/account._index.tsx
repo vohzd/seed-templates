@@ -6,6 +6,7 @@
 //   console.log(e);
 // }
 import type { ActionFunctionArgs } from "@remix-run/node";
+import { redirect } from "@remix-run/node";
 import { Form } from "@remix-run/react";
 
 import { checkAccount } from "@/api/account/check";
@@ -23,13 +24,15 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 
   console.log(response);
 
-  return true;
+  return response ? redirect("/account/login") : redirect("/account/register");
+
+  // return redirect("/account/register");
 };
 
 export default function Account() {
   return (
     <main>
-      <h1>Welcome to the account page</h1>
+      <h1>Welcome to the account page2</h1>
       <Form method="post">
         <h1>I am a form!</h1>
         <input type="text" name="email" />

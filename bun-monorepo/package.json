@@ -15,7 +15,7 @@
     "api:migrate-db": "cd packages/api && bun drizzle-kit generate:sqlite",
     "nuxt": "cd packages/nuxt && bun  --hot run dev",
     "next": "cd packages/next && bun  --hot run dev",
-    "remix": "cd packages/remix && bun  --hot run dev",
+    "remix": "cd packages/remix && npm run dev",
     "dev-all": "concurrently 'npm:api' 'npm:remix' 'npm:nuxt'",
     "dev-remix": "NODE_TLS_REJECT_UNAUTHORIZED=0 concurrently 'npm:api' 'npm:remix'",
     "dev-next": "NODE_TLS_REJECT_UNAUTHORIZED=0 concurrently 'npm:api' 'npm:next'",

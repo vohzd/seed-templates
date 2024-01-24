@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
-    "drizzle-kit": "^0.20.10"
+    "drizzle-kit": "^0.20.13"
   },
   "scripts": {
     "update-schema": "drizzle-kit generate:sqlite"
