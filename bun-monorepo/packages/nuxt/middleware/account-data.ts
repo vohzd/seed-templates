@@ -7,11 +7,15 @@ export default defineNuxtRouteMiddleware(async () => {
     console.log("DO NOT PASS GO");
     return;
   } else {
-    const api = await useApi("/account/check");
+    // i should probably add the guard to express and simply try to retreive the users data etc
+    // the express middleware should return a 403 if the jwt is bad
 
-    const response = await api.get();
+    // ignore this...
+    // const api = await useApi("/account/check-cookie");
 
-    console.log(response);
+    // const response = await api.get();
+
+    // console.log(response);
 
     // const response = await fetch("https://localhost:8080/account/check", {
     //   method: "GET",

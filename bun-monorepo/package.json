@@ -4,25 +4,28 @@
   "module": "index.ts",
   "type": "module",
   "workspaces": [
-    "packages/api",
+    "packages/express",
     "packages/remix",
     "packages/next",
     "packages/nuxt",
-    "packages/ui"
+    "packages/ui",
+    "packages/vue"
   ],
   "scripts": {
-    "api": "cd packages/api && bun  --watch run index.ts",
-    "api:migrate-db": "cd packages/api && bun drizzle-kit generate:sqlite",
+    "express": "cd packages/express && bun  --watch run index.ts",
+    "express:migrate-db": "cd packages/express && bun drizzle-kit generate:sqlite",
     "nuxt": "cd packages/nuxt && bun  --hot run dev",
     "next": "cd packages/next && bun  --hot run dev",
     "remix": "cd packages/remix && npm run dev",
-    "dev-all": "concurrently 'npm:api' 'npm:remix' 'npm:nuxt'",
-    "dev-remix": "NODE_TLS_REJECT_UNAUTHORIZED=0 concurrently 'npm:api' 'npm:remix'",
-    "dev-next": "NODE_TLS_REJECT_UNAUTHORIZED=0 concurrently 'npm:api' 'npm:next'",
-    "dev-nuxt": "NODE_TLS_REJECT_UNAUTHORIZED=0  concurrently 'npm:api' 'npm:nuxt'"
+    "vue": "cd packages/vue && npm run dev",
+    "dev-all": "concurrently 'npm:express' 'npm:remix' 'npm:nuxt'",
+    "dev-remix": "NODE_TLS_REJECT_UNAUTHORIZED=0 concurrently 'npm:express' 'npm:remix'",
+    "dev-next": "NODE_TLS_REJECT_UNAUTHORIZED=0 concurrently 'npm:express' 'npm:next'",
+    "dev-nuxt": "NODE_TLS_REJECT_UNAUTHORIZED=0  concurrently 'npm:express' 'npm:nuxt'",
+    "dev-vue": "NODE_TLS_REJECT_UNAUTHORIZED=0  concurrently 'npm:express' 'npm:vue'"
   },
   "dependencies": {
-    "axios": "^1.6.5",
+    "axios": "^1.6.7",
     "concurrently": "^8.2.2",
     "express-validator": "^7.0.1",
     "ky": "^1.2.0"

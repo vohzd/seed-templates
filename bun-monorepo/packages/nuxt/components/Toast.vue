@@ -9,6 +9,8 @@
 console.log("todo, actually consume this...");
 const errorState = useErrorState();
 
+console.log("errorstate is");
+console.log(errorState);
 </script>
 
 <style scoped>

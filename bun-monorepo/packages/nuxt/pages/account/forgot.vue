@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import KButton from "@epitrade/ui/Button.vue";
+import KButton from "@epitrade/ui/vue/Button.vue";
 import { useApi } from "~/composables/useApi";
 
 const isButtonDisabled = false;

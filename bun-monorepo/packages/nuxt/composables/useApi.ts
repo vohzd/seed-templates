@@ -1,45 +1,25 @@
-// import { FetchError } from "ofetch";
+import { type RefObject } from "~/utils/toPlainObject";
 
-import ky from "ky";
+// import ky from "ky";
 
 export async function useApi(endpoint: string) {
   const { apiUrl } = useAppConfig();
   const url = `${apiUrl}${endpoint}`;
 
   return {
-    async get(query?: object) {
+    async get(vueQuery: RefObject) {
       try {
-        // console.log("fetching....");
-        // console.log(query);
-        // const { data, error } = await useFetch(url, {
-        //   method: "GET",
-        //   credentials: "include",
+        const query = toPlainObject(vueQuery);
 
-        //   query,
-        // });
+        const { data } = await useFetch(url, {
+          method: "GET",
+          credentials: "include",
+          query,
+        });
 
-        const response = await ky
-          .get(url, {
-            credentials: "include",
-            searchParams: {
-              ...Object(query),
-            },
-          })
-          .json();
-
-        console.log("response");
-        console.log(response);
-
-        // something.
-        // if (error.value) {
-        //   useHandleError(error.value);
-        //   return error;
-        // }
-
-        return response;
+        // this is vue being fucking stupid and always returning a Proxy
+        return toRaw(data.value);
       } catch (e) {
-        console.log("Network Request Failed...");
-        console.log(e);
         throw new Error("Network Request Failed...");
       }
     },
@@ -55,30 +35,34 @@ export async function useApi(endpoint: string) {
         //   }
         // );
 
-        // console.log("finished posting..");
-        // console.log(data);
+        console.log("posting..");
+        console.log(body);
 
-        // const { data, error } = await useFetch(url, {
-        //   method: "POST",
-        //   body,
-        //   // this is absolutely mandatory if you want cookies to work
-        //   credentials: "include",
-        //   // not sure if i truly want this set to true
-        //   watch: false,
-        // });
+        const { data, error } = await useFetch(url, {
+          method: "POST",
+          body,
+          // this is absolutely mandatory if you want cookies to work
+          credentials: "include",
+          // not sure if i truly want this set to true
+          watch: false,
+        });
 
-        // if (error.value) {
+        console.log("data");
+        console.log(data);
+        console.log("error");
+        console.log(error);
 
-        //   console.log("failed...");
-        //   // useHandleError(error.value);
-        //   // console.log(error.value.statusMessage);
-        //   // return {
-        //   //   code: error.value.statusCode,
-        //   //   message: error.value.statusMessage,
-        //   // };
-        // }
+        if (error.value) {
+          console.log("failed...");
+          useHandleError(error.value);
+          console.log(error.value.statusMessage);
+          return {
+            code: error.value.statusCode,
+            message: error.value.statusMessage,
+          };
+        }
 
-        return data;
+        return data.value;
       } catch (e) {
         console.log("Network Request Failed...");
         throw new Error("Network Request Failed...");

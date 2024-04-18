@@ -1,0 +1,7 @@
+{
+  "name": "my-web-components",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "type": "module",
+  "exports": "./src/index.js"
+}

@@ -1,6 +1,5 @@
 /* eslint-disable import/no-unresolved */
 import type { ActionFunctionArgs } from "@remix-run/node";
-import { redirect } from "@remix-run/node";
 import { Form } from "@remix-run/react";
 
 import { loginAccount } from "@/api/account/login";
@@ -20,8 +19,8 @@ export const action = async ({ request }: ActionFunctionArgs) => {
   console.log(response);
 
   // return response ? redirect("/account/login") : redirect("/account/register");
-
-  return redirect("/account/dashboard");
+  return null;
+  // return redirect("/account/dashboard");
 };
 
 export default function Login() {

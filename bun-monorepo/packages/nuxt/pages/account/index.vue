@@ -12,18 +12,19 @@
 </template>
 
 <script setup lang="ts">
-import KButton from "@epitrade/ui/Button.vue";
-import KForm from "@epitrade/ui/Form.vue";
-import KInput from "@epitrade/ui/Input.vue";
+import KButton from "@epitrade/ui/vue/Button.vue";
+import KForm from "@epitrade/ui/vue/Form.vue";
+import KInput from "@epitrade/ui/vue/Input.vue";
 
 import { useApi } from "~/composables/useApi";
 
-const api = await useApi("/account");
+const api = await useApi("/account/check");
+
 const email = ref("test@example7.com");
 
 async function checkEmail(e: SubmitEvent) {
   e.preventDefault();
-  const { value: exists } = await api.get({ email: toRaw(email) });
+  const { exists } = await api.get({ email: toRaw(email) });
   exists ? await navigateTo(`/account/login?email=${String(email.value)}`) : await navigateTo(`/account/register?email=${String(email.value)}`);
 }
 </script>

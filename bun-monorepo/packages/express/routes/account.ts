@@ -63,14 +63,17 @@ router.post("/login", validate(accountBody), async (req, res) => {
       // YOU NEED TO IMPLEMENT JWT CREATION USING JOSE
       const generateJWT = (hash: string) => hash;
 
-      res.cookie("bunbunbun", generateJWT(hash), {
-        maxAge: 1000 * 60 * 2400,
-        sameSite: "lax", // Necessary for cross-origin, but requires Secure in production
-        secure: false, // Set to true in production with HTTPS
-        httpOnly: false,
-      });
+      // res.cookie("bunbunbun", generateJWT(hash), {
+      //   maxAge: 1000 * 60 * 2400,
+      //   sameSite: "lax", // Necessary for cross-origin, but requires Secure in production
+      //   secure: false, // Set to true in production with HTTPS
+      //   httpOnly: false,
+      // });
 
-      res.send(true);
+      res.send({
+        success: true,
+        cookie: generateJWT(hash),
+      });
     } else {
       console.log("Login failed for:", email);
       res.status(401).send(false); // 401 Unauthorized

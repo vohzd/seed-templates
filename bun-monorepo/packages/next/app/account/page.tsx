@@ -1,6 +1,8 @@
 "use client";
 
-import Form from "@epitrade/ui/react/Form";
+import { Form } from "@epitrade/ui/react/Form";
+
+// import { TestComponent } from "@epitrade/ui/core";
 
 import { useCheckEmail } from "@/hooks/useCheckEmail";
 
@@ -49,6 +51,7 @@ export default function AccountPage() {
       <Form onSubmit={submitLogin}>
         <input placeholder="Email" name="email" onChange={handleInputChange} />
         <button>Submit</button>
+        {/* <TestComponent /> */}
       </Form>
     </main>
   );

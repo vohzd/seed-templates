@@ -6,10 +6,11 @@ export async function createAccount(email: string, password: string) {
 
   console.log("feuwgfgewui");
 
-  const response = await fetch(`https://localhost:8080/account`, {
+  const response = await fetch(`http://localhost:8080/account`, {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
     },
     method: "POST",
     credentials: "include",

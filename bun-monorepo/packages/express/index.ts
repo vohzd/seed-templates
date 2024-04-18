@@ -30,7 +30,9 @@ app.use(cookieParser());
 app.use(
   cors({
     // todo, switch origin to a whitelist in production
-    origin: true, // reflect (enable) the requested origin in the CORS response
+    // origin: "YOUR_PRODUCTION_ENDPOINT_HERE.com",
+
+    origin: true,
     credentials: true, // allow cookies to be sent
     methods: "PUT, POST, GET, DELETE, OPTIONS",
   })

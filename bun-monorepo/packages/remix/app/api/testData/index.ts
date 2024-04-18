@@ -1,5 +1,5 @@
 export async function getTestData() {
-  const response = await fetch(`https://localhost:8080/test`, {
+  const response = await fetch(`http://localhost:8080/test`, {
     method: "GET",
   });
 
