@@ -5,14 +5,15 @@
     <p>Enter your Email.</p>
     <k-form @submit="checkEmail">
       <k-input v-model="email" placeholder="Email Address" />
-      <k-button class="mt" :disabled="!isEmailValid(email)" type="submit">Check Email</k-button>
+      <k-button class="mt" :disabled="!isEmailValid(email)" type="submit" @click="checkEmail">Check Email1234</k-button>
     </k-form>
+    <!-- <Button /> -->
     <nuxt-link to="/account/forgot" class="mtx">Forgot?</nuxt-link>
   </main>
 </template>
 
 <script setup lang="ts">
-import KButton from "@epitrade/ui/vue/Button.vue";
+import Button from "@epitrade/ui/vue/Button.vue";
 import KForm from "@epitrade/ui/vue/Form.vue";
 import KInput from "@epitrade/ui/vue/Input.vue";
 

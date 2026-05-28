@@ -5,4 +5,5 @@ export default defineNuxtConfig({
   devServer: {
     https: true,
   },
+  ssr: false,
 });

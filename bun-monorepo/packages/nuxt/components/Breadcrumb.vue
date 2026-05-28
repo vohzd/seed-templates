@@ -1,8 +1,6 @@
 <template>
   <nav aria-label="breadcrumb" class="center mt">
-    <nuxt-link :to="breadcrumb.url" v-for="(breadcrumb, index) in breadcrumbs" :key="index" class="breadcrumb-item">
-      /{{ breadcrumb.label }}
-    </nuxt-link>
+    <nuxt-link :to="breadcrumb.url" v-for="(breadcrumb, index) in breadcrumbs" :key="index" class="breadcrumb-item"> /{{ breadcrumb.label }} </nuxt-link>
   </nav>
 </template>
 

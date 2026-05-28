@@ -8,21 +8,20 @@
       <k-input v-model="password" placeholder="Password" />
       <k-button :disabled="password.length === 0" type="submit">Login</k-button>
     </k-form>
-
   </main>
 </template>
 
 <script setup lang="ts">
-import KButton from "@epitrade/ui/Button.vue";
-import KForm from "@epitrade/ui/Form.vue";
-import KInput from "@epitrade/ui/Input.vue";
+import KButton from "@epitrade/ui/vue/Button.vue";
+import KForm from "@epitrade/ui/vue/Form.vue";
+import KInput from "@epitrade/ui/vue/Input.vue";
 
 import { useApi } from "~/composables/useApi";
 
 type LoginResponse = {
-  code?: number
-  message?: string
-}
+  code?: number;
+  message?: string;
+};
 
 const api = await useApi("/account/login");
 
@@ -37,7 +36,6 @@ async function handleLogin(e: SubmitEvent) {
 
   console.log("logging in...");
   console.log(response);
-
 
   if (response) {
     await navigateTo("/account/dashboard");

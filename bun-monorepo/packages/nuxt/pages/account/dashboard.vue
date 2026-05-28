@@ -16,7 +16,7 @@
   </main>
 </template>
 <script lang="ts" setup>
-import KButton from "@epitrade/ui/Button.vue";
+import KButton from "@epitrade/ui/vue/Button.vue";
 
 definePageMeta({
   middleware: ["account-data"],

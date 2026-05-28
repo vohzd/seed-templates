@@ -2,12 +2,10 @@
   <main class="center">
     <h1>Cool Website</h1>
     <p>Reactive text: {{ test }}</p>
-    <client-only>
-      <test-component />
-    </client-only>
-    <!-- <p>
+
+    <p>
       <nuxt-link to="/account">Go to Account</nuxt-link>
-    </p> -->
+    </p>
   </main>
 </template>
 
@@ -15,7 +13,7 @@
 import TestComponent from "../../ui/webcomponents/testComponent";
 // import { ref } from '#imports';
 
-const test = ref("some string2");
+const test = ref("some string24");
 </script>
 
 <style lang="css">
